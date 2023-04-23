@@ -7,7 +7,7 @@ public class Task3 {
         List<Books> product = getBooks();
 
         for (Books prod : product) {
-            if(checkPrimeNumbers(prod.pages)&& prod.surname.startsWith("А")){
+            if(prod.checkPrimeNumbers(prod.pages)&& prod.surname.startsWith("А")){
                 if(prod.year<=2010){
                     System.out.println(prod.name);
                 }
@@ -25,19 +25,6 @@ public class Task3 {
         return product;
     }
 
-    /**
-     *
-     * @param num На вход целое число
-     * @return - Да если оно простое, Нет если не простое.
-     */
-    public static boolean checkPrimeNumbers (int num){
-        for (int i = 2; i < num; i++) {
-            if(num%i==0){
-                return false;
-            }
-        }
-        return true ;
-    }
 
 }
 

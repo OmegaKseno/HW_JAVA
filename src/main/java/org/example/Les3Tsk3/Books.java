@@ -16,6 +16,15 @@ public class Books {
         this.year = year;
         this.pages = pages;
     }
+    public boolean checkPrimeNumbers (int num){
+        for (int i = 2; i < num; i++) {
+            if(num%i==0){
+                return false;
+            }
+        }
+        return true ;
+
+    }
 
 
 }
